@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/width_movie"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/margin_medium_2">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivMovie"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_movie"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/movie_img"
+        app:shapeAppearanceOverlay="@style/shapeable_overlay_movie" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivMovie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        tools:text="Detective Pikachu"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold" />
+
+   <!-- <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGenresAndRuntime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMovieName"
+        android:layout_centerHorizontal="true"
+        tools:text="Mystery/Adventure - 1h 45m"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_smaller" />-->
+
+
+</RelativeLayout>

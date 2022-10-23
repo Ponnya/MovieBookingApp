@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SelectDateActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_toolbar_select_date">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBackSelectDate"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_xlarge"
+                    android:backgroundTint="@android:color/transparent"
+                    app:icon="@drawable/ic_baseline_arrow_back_ios_white_24dp"
+                    app:iconSize="@dimen/margin_large"
+                    app:iconTint="@color/white" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewDateSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/margin_xlarge"
+                    android:clipToPadding="false"
+                    android:paddingEnd="@dimen/margin_medium_2" />
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/rounded_collapsing_toolbar"
+            android:elevation="@dimen/margin_small"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewTimeSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/margin_xxlarge" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recyclerViewTimeSelect"
+                    android:layout_marginBottom="@dimen/margin_bottom_nested_scroll"/>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_transparent_view"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_detail" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_login_btn"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:elevation="@dimen/margin_medium"
+        android:text="@string/lbl_next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_sign_in_with"
+        app:cornerRadius="@dimen/margin_medium" />
+</FrameLayout>

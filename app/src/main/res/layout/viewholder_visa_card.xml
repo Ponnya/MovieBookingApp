@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/margin_medium"
+    app:cardElevation="4dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_visa_card" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="VISA"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:text="..."
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:text="* * * *"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_toEndOf="@id/tvStar1"
+            android:text="* * * *"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_toEndOf="@id/tvStar2"
+            android:text="* * * *"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVisaCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_toEndOf="@id/tvStar3"
+            android:paddingBottom="@dimen/margin_small"
+            android:text="8 0 1 4"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCardHolderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="Lily Johnson"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tvCardHolderName"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:text="@string/lbl_card_holder"
+            android:textAllCaps="true"
+            android:textColor="@color/secondaryTextColor2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvExpireDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="08/21"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tvExpireDate"
+            android:layout_alignEnd="@id/tvExpireDate"
+            android:text="@string/lbl_expires"
+            android:textColor="@color/secondaryTextColor2" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

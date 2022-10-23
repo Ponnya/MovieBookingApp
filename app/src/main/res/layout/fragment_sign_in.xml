@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayoutSignIn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SignInFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSignInName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/edtSignInName"
+        android:text="@string/lbl_name"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_regular_2x"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edtSignInName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSignInName"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:hint="@string/lbl_name"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:textColorHint="@color/secondaryTextColor"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSignInPhoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSignInName"
+        android:layout_alignStart="@id/edtSignInPhoneNo"
+        android:text="@string/lbl_phone_number"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_regular_2x"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edtSignInPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSignInPhoneNo"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:hint="@string/lbl_phone_number"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:textColorHint="@color/secondaryTextColor"
+        tools:ignore="RtlSymmetry" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSignInEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSignInPhoneNo"
+        android:layout_alignStart="@id/edtSignInEmail"
+        android:text="@string/lbl_email"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_regular_2x"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edtSignInEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSignInEmail"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:hint="@string/lbl_email"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:textColorHint="@color/secondaryTextColor"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSignInPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSignInEmail"
+        android:layout_alignStart="@id/edtSignInPassword"
+        android:text="@string/lbl_password"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_regular_2x"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edtSignInPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSignInPassword"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:hint="@string/lbl_password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:textColorHint="@color/secondaryTextColor"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSignInForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtSignInPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:text="@string/lbl_forgot_password"
+        android:textColor="@color/secondaryTextColor" />
+
+
+    <include
+        android:id="@+id/viewpodSignInButton"
+        layout="@layout/viewpod_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSignInForgotPassword"/>
+
+
+</RelativeLayout>

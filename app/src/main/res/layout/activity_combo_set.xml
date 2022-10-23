@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ComboSetActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackComboSet"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_baseline_arrow_back_ios_white_24dp"
+                app:iconSize="@dimen/margin_large"
+                app:iconTint="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewComboSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnBackComboSet"
+                android:layout_marginBottom="@dimen/margin_medium_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPromoCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewComboSet"
+                android:layout_alignStart="@id/edtPromoCode"
+                android:text="@string/lbl_enter_promo_code"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/text_regular_2x"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtPromoCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPromoCode"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:backgroundTint="@color/secondaryTextColor"
+                android:hint="@string/lbl_enter_promo_code"
+                android:maxLines="1"
+                android:paddingStart="@dimen/margin_medium_2"
+                android:textColorHint="@color/secondaryTextColor"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDontHaveAnyPromoCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtPromoCode"
+                android:layout_alignStart="@id/edtPromoCode"
+                android:text="@string/lbl_don_t_have_any_promo_code"
+                android:textColor="@color/secondaryTextColor" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGetItNow"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_large"
+                android:layout_below="@id/edtPromoCode"
+                android:layout_toEndOf="@id/tvDontHaveAnyPromoCode"
+                android:gravity="top|start"
+                android:paddingTop="-24dp"
+                android:text="Get it now"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLblTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDontHaveAnyPromoCode"
+                android:layout_alignStart="@id/tvDontHaveAnyPromoCode"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_total"
+                android:textColor="@color/lightGreen"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDontHaveAnyPromoCode"
+                android:layout_alignTop="@id/tvLblTotalAmount"
+                android:layout_toEndOf="@id/tvLblTotalAmount"
+                tools:text="40$"
+                android:textColor="@color/lightGreen"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLblPaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLblTotalAmount"
+                android:layout_alignStart="@id/tvLblTotalAmount"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:text="Payment method"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLblPaymentMethod"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/margin_xxlarge" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewPaymentMethod"
+                android:layout_marginBottom="@dimen/margin_bottom_nested_scroll" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_transparent_view"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_detail" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPayTotalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_login_btn"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:elevation="@dimen/margin_medium"
+        tools:text="@string/btn_pay_total_amount_lbl"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_sign_in_with"
+        app:cornerRadius="@dimen/margin_medium" />
+
+</FrameLayout>

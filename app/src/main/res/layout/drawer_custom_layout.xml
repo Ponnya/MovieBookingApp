@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfileDrawer"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_img"
+        app:shapeAppearanceOverlay="@style/circle_profile_image" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProfileNameDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivProfileDrawer"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_toEndOf="@id/ivProfileDrawer"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        tools:text="Hi Ponnya!" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEmailDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvProfileNameDrawer"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_toEndOf="@id/ivProfileDrawer"
+        android:gravity="center"
+        tools:text="ponnya@gmail.com"
+        android:textColor="@color/secondaryTextColor"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEditDrawer"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_medium_3"
+        android:layout_alignTop="@id/tvEmailDrawer"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:background="@android:color/transparent"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textColor="@color/secondaryTextColor" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIconPromoCodeDrawer"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_below="@id/ivProfileDrawer"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:src="@drawable/ic_baseline_local_offer_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivIconPromoCodeDrawer"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_toEndOf="@id/ivIconPromoCodeDrawer"
+        android:text="@string/lbl_promotion_code"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIconTranslateDrawer"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_below="@id/ivIconPromoCodeDrawer"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:src="@drawable/ic_baseline_g_translate_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivIconTranslateDrawer"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_toEndOf="@id/ivIconTranslateDrawer"
+        android:text="@string/lbl_select_a_language"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIconServicesDrawer"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_below="@id/ivIconTranslateDrawer"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:src="@drawable/ic_baseline_assignment_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivIconServicesDrawer"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_toEndOf="@id/ivIconServicesDrawer"
+        android:text="Tearm of services"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIconHelpDrawer"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_below="@id/ivIconServicesDrawer"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:src="@drawable/ic_baseline_help_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivIconHelpDrawer"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_toEndOf="@id/ivIconHelpDrawer"
+        android:text="@string/lbl_help"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIconRateUsDrawer"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_below="@id/ivIconHelpDrawer"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:src="@drawable/ic_baseline_stars_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivIconRateUsDrawer"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_toEndOf="@id/ivIconRateUsDrawer"
+        android:text="@string/lbl_rate_us"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogOut"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_xxlarge"
+        android:paddingStart="-1dp"
+        android:text="@string/lbl_log_out"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        app:icon="@drawable/ic_baseline_logout_white_24dp"
+        app:iconTint="@color/white"/>
+
+
+</RelativeLayout>

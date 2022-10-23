@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padc.ponnya.hellomoviebooking.viewpods.LoginButtonViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvErrorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:drawableStart="@drawable/ic_baseline_error_outline_white_24dp"
+        android:drawablePadding="@dimen/margin_medium_2"
+        android:drawableTint="@color/color_red"
+        android:text="Please input phone number with 959..."
+        android:textColor="@color/color_red"
+        android:visibility="gone" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignInWithFacebook"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_login_btn"
+        android:layout_below="@id/tvErrorMsg"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:paddingStart="@dimen/margin_xlarge"
+        android:text="@string/lbl_sign_in_with_facebook"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_size_sign_in_with"
+        app:cornerRadius="@dimen/margin_medium"
+        app:icon="@drawable/ic_facebook_blue_16dp"
+        app:iconPadding="@dimen/margin_large"
+        app:iconSize="@dimen/margin_large"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:strokeColor="@color/secondaryTextColor"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignInWithGoogle"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_login_btn"
+        android:layout_below="@id/btnSignInWithFacebook"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:paddingStart="@dimen/margin_xlarge"
+        android:text="@string/lbl_sign_in_with_google"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_size_sign_in_with"
+        app:cornerRadius="@dimen/margin_medium"
+        app:icon="@drawable/ic_google_16dp"
+        app:iconPadding="@dimen/margin_large"
+        app:iconSize="@dimen/margin_large"
+        app:iconTint="@android:color/transparent"
+        app:iconTintMode="add"
+        app:strokeColor="@color/secondaryTextColor"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_login_btn"
+        android:layout_below="@id/btnSignInWithGoogle"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:text="@string/lbl_confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_sign_in_with"
+        app:cornerRadius="@dimen/margin_medium" />
+
+</com.padc.ponnya.hellomoviebooking.viewpods.LoginButtonViewPod>

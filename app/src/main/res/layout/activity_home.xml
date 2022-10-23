@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayoutHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayoutHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBarHome"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:title="" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/margin_xxlarge"
+                    android:layout_height="@dimen/margin_xxlarge"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_img"
+                    app:shapeAppearanceOverlay="@style/circle_profile_image" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/ivProfile"
+                    android:layout_alignBottom="@id/ivProfile"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_toEndOf="@id/ivProfile"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textStyle="bold"
+                    tools:text="@string/user_name" />
+
+                <include
+                    android:id="@+id/viewPodNowShowing"
+                    layout="@layout/viewpod_movie_lists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivProfile"
+                    android:layout_marginTop="@dimen/margin_medium_2" />
+
+                <include
+                    android:id="@+id/viewPodComingSoon"
+                    layout="@layout/viewpod_movie_lists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewPodNowShowing"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_medium_2" />
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationViewHome"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:maxWidth="300dp">
+
+        <include layout="@layout/drawer_custom_layout" />
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

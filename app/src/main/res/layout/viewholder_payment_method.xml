@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_medium_2"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:layout_marginEnd="@dimen/margin_medium_2">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:layout_alignTop="@id/tvTypeOfPaymentMethod"
+        android:layout_alignBottom="@id/tvPaymentMethodDetail"
+        android:src="@drawable/ic_baseline_credit_card_white_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTypeOfPaymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_toEndOf="@id/ivIcon"
+        android:text="Credit Card"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPaymentMethodDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTypeOfPaymentMethod"
+        android:layout_alignStart="@id/tvTypeOfPaymentMethod"
+        android:layout_toEndOf="@id/ivIcon"
+        android:text="Visa, master card, JCB"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_small" />
+
+
+</RelativeLayout>

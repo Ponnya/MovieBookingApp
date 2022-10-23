@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#623EEA</color>
+    <color name="secondaryTextColor">#98A5C0</color>
+    <color name="icon_color">#8191B2</color>
+    <color name="colorPrimaryLight">#9F79F3</color>
+    <color name="lightGreen">#53D2AB</color>
+    <color name="secondaryTextColor2">#D6CEFA</color>
+    <color name="primaryTextColor">#1A2036</color>
+    <color name="facebookIconColor">#1976D2</color>
+    <color name="whiteTransparent">#B3FFFFFF</color>
+    <color name="colorAccent">#E7B943</color>
+    <color name="visa_card_start_color">#9A86FA</color>
+    <color name="visa_card_end_color">#9265F4</color>
+    <color name="movie_seat_available_color">#D0D8EB</color>
+    <color name="movie_seat_taken_color">#8191B2</color>
+    <color name="ticket_background_color">#F4F4F4</color>
+    <color name="color_red">#FF0000</color>
+</resources>

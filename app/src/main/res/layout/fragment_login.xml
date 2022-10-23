@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayoutLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LoginFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/edtLoginEmail"
+        android:text="@string/lbl_email"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_regular_2x"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edtLoginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEmail"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:hint="@string/lbl_email"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:textColorHint="@color/secondaryTextColor"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtLoginEmail"
+        android:layout_alignStart="@id/edtLoginPassword"
+        android:text="@string/lbl_password"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="@dimen/text_regular_2x"
+        android:visibility="gone" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPassword"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:backgroundTint="@color/secondaryTextColor"
+        android:hint="@string/lbl_password"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:textColorHint="@color/secondaryTextColor"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtLoginPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:maxLines="1"
+        android:text="Forgot Password ?"
+        android:textColor="@color/secondaryTextColor" />
+
+    <include
+        android:id="@+id/viewPodLoginButton"
+        layout="@layout/viewpod_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvForgotPassword" />
+
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padc.ponnya.hellomoviebooking.viewpods.MovieListsViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleOfMovieLists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:text="@string/lbl_now_showing"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewMovieLists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleOfMovieLists"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:clipToPadding="false"
+        android:paddingEnd="@dimen/margin_medium_2" />
+
+</com.padc.ponnya.hellomoviebooking.viewpods.MovieListsViewPod>

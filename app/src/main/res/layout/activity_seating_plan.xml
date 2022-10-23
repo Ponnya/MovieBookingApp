@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SeatingPlanActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackSeatingPlan"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:layout_width="@dimen/margin_xlarge"
+                android:layout_height="@dimen/margin_xlarge"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_baseline_arrow_back_ios_white_24dp"
+                app:iconSize="@dimen/margin_large"
+                app:iconTint="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMovieNameSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnBackSeatingPlan"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_heading_1x"
+                android:textStyle="bold"
+                tools:text="Detective Pikachu" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCinemaSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMovieNameSeatingPlan"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/text_regular_2x"
+                tools:text="Galaxy Cinema - Golden City" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateAndTimeSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCinemaSeatingPlan"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_2x"
+                tools:text="Wednesday, 10 May, 07:00 PM" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSeatingPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDateAndTimeSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:layout_marginEnd="@dimen/margin_card_medium_2" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAvailableSeatingPlan"
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:layout_below="@id/recyclerViewSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:background="@color/movie_seat_available_color"
+                app:shapeAppearanceOverlay="@style/circle_profile_image" />
+
+            <TextView
+                android:id="@+id/tvAvailableSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewSeatingPlan"
+                android:layout_alignTop="@id/ivAvailableSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_toEndOf="@id/ivAvailableSeatingPlan"
+                android:text="@string/lbl_available"
+                android:textColor="@color/secondaryTextColor"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivReservedSeatingPlan"
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:layout_below="@id/recyclerViewSeatingPlan"
+                android:layout_alignTop="@id/tvAvailableSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvAvailableSeatingPlan"
+                android:background="@color/movie_seat_taken_color"
+                app:shapeAppearanceOverlay="@style/circle_profile_image" />
+
+            <TextView
+                android:id="@+id/tvReservedSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewSeatingPlan"
+                android:layout_alignTop="@id/ivReservedSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_toEndOf="@id/ivReservedSeatingPlan"
+                android:text="@string/lbl_reserved"
+                android:textColor="@color/secondaryTextColor"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivSelectionSeatingPlan"
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:layout_below="@id/recyclerViewSeatingPlan"
+                android:layout_alignTop="@id/tvAvailableSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tvReservedSeatingPlan"
+                android:background="@color/colorPrimary"
+                app:shapeAppearanceOverlay="@style/circle_profile_image" />
+
+            <TextView
+                android:id="@+id/tvSelectionSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewSeatingPlan"
+                android:layout_alignTop="@id/ivSelectionSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_toEndOf="@id/ivSelectionSeatingPlan"
+                android:text="@string/lbl_your_selection"
+                android:textColor="@color/secondaryTextColor"/>
+
+            <ImageView
+                android:id="@+id/ivDottedLineSeatingPlan"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/ivAvailableSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layerType="software"
+                android:src="@drawable/dotted" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLblTicketSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivDottedLineSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_tickets"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivDottedLineSeatingPlan"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLblSeatsSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLblTicketSeatingPlan"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_seats"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSeatsSeatingPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTicketSeatingPlan"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_bottom_nested_scroll"
+                android:paddingBottom="@dimen/margin_xxlarge"
+                tools:text="D Row/ 5, 6"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_2x" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_transparent_view"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_detail" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirmSeatingPlan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_login_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:elevation="@dimen/margin_medium"
+        android:text="Buy Ticket for $0.0"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_sign_in_with"
+        app:cornerRadius="@dimen/margin_medium" />
+
+
+</FrameLayout>

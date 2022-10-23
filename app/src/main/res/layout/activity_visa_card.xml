@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.VisaCardActivity">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackVisaCard"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        android:layout_width="@dimen/margin_xlarge"
+        android:layout_height="@dimen/margin_xlarge"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/ic_baseline_arrow_back_ios_white_24dp"
+        app:iconSize="@dimen/margin_large"
+        app:iconTint="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLblPaymentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnBackVisaCard"
+        android:layout_alignStart="@id/btnBackVisaCard"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/lbl_payment_amount"
+        android:textColor="@color/secondaryTextColor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPaymentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLblPaymentAmount"
+        android:layout_alignStart="@id/tvLblPaymentAmount"
+        android:layout_marginTop="@dimen/margin_medium"
+        tools:text="$ 926.21"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerVisaCard"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_below="@id/tvPaymentAmount"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddNewCard"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnConfirmVisaCard"
+        android:layout_alignStart="@id/btnBackVisaCard"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:paddingStart="-1dp"
+        android:text="@string/lbl_add_new_card"
+        android:textColor="@color/lightGreen"
+        android:textSize="@dimen/text_regular"
+        app:icon="@drawable/ic_baseline_add_circle_white_24dp"
+        app:iconTint="@color/lightGreen" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirmVisaCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_login_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:elevation="@dimen/margin_medium"
+        android:text="@string/lbl_confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_sign_in_with"
+        app:cornerRadius="@dimen/margin_medium" />
+
+</RelativeLayout>

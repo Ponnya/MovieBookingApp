@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutTime"
+    android:layout_width="@dimen/width_time"
+    android:layout_height="@dimen/margin_xxlarge"
+    android:layout_marginStart="@dimen/margin_medium_2"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:backgroundTintMode="screen"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:backgroundTint="@color/colorPrimary"
+    android:background="@drawable/background_time">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:textSize="@dimen/text_regular_2x"
+        android:text="11:45" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAMPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvTime"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@id/tvTime"
+        android:text="AM"
+        android:textSize="@dimen/text_small" />
+</RelativeLayout>
